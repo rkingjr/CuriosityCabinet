@@ -16,10 +16,18 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    title: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        },
+    affiliation: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,13 +40,13 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
+        len: [8],
       },
     },
   },
   {
     hooks: {
-      async beforeCreate(newUserData) {
+      beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
