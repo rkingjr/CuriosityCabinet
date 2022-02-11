@@ -1,33 +1,39 @@
-## Project 1: PokeWeather Webpage
+# Project 1: PokeWeather Webpage
 
 **Version 1.0**
-# Description:
+## Description:
 
-# User Story:
+## User Story:
 
 AS
 I WANT
 SO THAT
-# Original Wireframe:
+## Original Wireframe and Tables Diagram:
 
-![Slide 1 containing homepage layout]()
+Gallery View:
+![Slide 1 containing homepage layout](./README_Files/Slide1.jpeg)
 
-![Slide 2 containing sign up page layout]()
+Sign Up Page:
+![Slide 2 containing sign up page layout](./README_Files/Slide2.jpeg)
 
-![Slide 3 containing upload and annotation page]()
+Annotation Page:
+![Slide 3 containing upload and annotation page](./README_Files/Slide3.jpeg)
 
-# Built Utilizing:
+Tables Diagram:
+![Slide 4 containing tables diagram](./README_Files/Slide4.jpg)
 
-# Screenshot:
+## Built Utilizing:
+
+## Screenshot:
 
 ![Screencastify of deployed application]()
 
-# Deployed Application:
+## Deployed Application:
 
 
-# Future Development:
+## Future Development:
 
-# Contributors:
+## Contributors:
 
 Francis Bond - <https://github.com/francis-bond> /
 Julie Chu - <https://github.com/jehulie> /
