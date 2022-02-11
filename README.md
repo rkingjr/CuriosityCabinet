@@ -29,8 +29,8 @@ SO THAT
 
 # Contributors:
 
-Francis Bond - <https://github.com/francis-bond>
-Julie Chu - <https://github.com/jehulie>
-Randy King Jr. - <https://github.com/rkingjr>
-Steven Schmidt - <https://github.com/StevenSchmidtAusTex>
-Austin Stoppenhagen - <https://github.com/DEAD-STOP>
+Francis Bond - <https://github.com/francis-bond> /
+Julie Chu - <https://github.com/jehulie> /
+Randy King Jr. - <https://github.com/rkingjr> /
+Steven Schmidt - <https://github.com/StevenSchmidtAusTex> /
+Austin Stoppenhagen - <https://github.com/DEAD-STOP> /
