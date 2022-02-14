@@ -8,7 +8,7 @@ const userdata = [
   },
   {
     name: 'Hannah Arendt',
-    title: 'Philsopher',
+    title: 'Philosopher',
     affiliation: 'Homo Faber Tech',
   },
   {
