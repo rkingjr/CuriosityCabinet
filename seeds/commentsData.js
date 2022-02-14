@@ -34,9 +34,9 @@ const commentsdata = [
     image_id: 4,
   },
   {
-    comment1: 'Everywhere there is transfer of flows across different landscapes and media, you will find ports.',
-    comment2: 'Shipping port',
-    comment3: 'Ports on computer motherboard',
+    comment1: 'Wherever there is a transfer of flows across different landscapes and media, you will find ports enabling the logical work of docking, loading and unloading.',
+    comment2: 'Seaport for container ships',
+    comment3: 'Ports on a computer motherboard',
     comment4: 'Ports off a personal laptop',
     comment5: 'Ports powering internet connectivity at data centers',
     image_id: 5,
