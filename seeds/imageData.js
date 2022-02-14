@@ -2,48 +2,48 @@ const { Image } = require('../models');
 
 const imagedata = [
   {
-    title: 'Blossoming Apricot',
-    photographer: 'LedyX',
-    image_date: 'March 30, 2018',
-    filename: '01-blossoming-apricot.jpg',
+    title: 'Matryoshka Designs',
+    photographer:'', 
+    image_date: '',
+    filename: 'maytryosha-web.jpeg',
     description:
-      'Branches with pink apricot blossoms against a blue background.',
+      'A key design model for logistical work',
     user_id: 1,
   },
   {
-    title: 'Cosmo Flowers',
-    photographer: 'WStudio',
-    image_date: 'May 05, 2017',
-    filename: '02-cosmos-flowers.jpg',
+    title: 'Pallet',
+    photographer: '',
+    image_date: '',
+    filename: 'pallet-web.jpeg',
     description:
-      'Pink cosmos flowers against a blue sky.',
+      'A modular platform for enabling the efficient movement of goods',
     user_id: 1,
   },
   {
-    title: 'Sand + Sea = Summer',
-    photographer: 'icemanphotos',
-    image_date: 'July 4, 2020',
-    filename: '04-beach-chairs.jpg',
+    title: 'QR Code',
+    photographer: '',
+    image_date: '',
+    filename: 'qrcode-web.jpeg',
     description:
-      'Two beach chairs under a beach umbrella on the beach.',
+      'An advanced form of the barcode for tracking and processing flows of commerce, information and manufacturing',
     user_id: 2,
   },
   {
-    title: 'Beach Sunrise',
-    photographer: 'VRstudio',
-    image_date: 'August 14, 2016',
-    filename: '05-beach-sunrise.jpg',
+    title: 'Scanner',
+    photographer: '',
+    image_date: '',
+    filename: 'scanner-web.jpeg',
     description:
-      'Sun setting in the horizon with waves lapping the shore.',
+      'A key tracking device for coordinating the movement of goods, labor, transport, and information',
     user_id: 2,
   },
   {
-    title: 'Fall Colors',
-    photographer: 'DrivingJack',
-    image_date: 'October 15, 2018',
-    filename: '06-fall-colors.jpg',
+    title: 'Ports',
+    photographer: '',
+    image_date: '',
+    filename: 'ports.png',
     description:
-      'Trees with red, orange, yellow leaves reflected on a still lake.',
+      'A docking zone for the logistical work of loading and unloading flows',
     user_id: 3,
   },
 ];
