@@ -7,6 +7,9 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
+const alpine = require('alpinejs');
+
+alpine.start();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
