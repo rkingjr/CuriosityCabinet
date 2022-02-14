@@ -1,0 +1,13 @@
+<section class="artifacts"> 
+  {{!-- the class label above used to be "paintings" --}}
+
+  <img src="/images/{{image.filename}}" alt="{{image.description}}">
+  <div class="image-details">
+    {{!-- the code for displaying annotations via comments-details--}}
+    {{> comments-details}}
+    <h3>{{image.title}}</h3>
+    {{!-- need a conditional statement here to account for null field --}}
+    {{!-- <p>By: {{image.photographer}}</p> --}}
+    <p>{{image.description}}</p>
+  </div>
+</section>
