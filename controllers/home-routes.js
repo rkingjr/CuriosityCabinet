@@ -56,7 +56,8 @@ router.get('/comments/:id', async (req, res) => {
     });
 
     const comments = dbImageData.get({ plain: true });
-    res.render('comments', { comments });
+    console.log(comments);
+    res.render('comments', comments);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
