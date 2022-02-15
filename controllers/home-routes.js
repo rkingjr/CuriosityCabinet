@@ -1,71 +1,56 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
-// Import the custom middleware
-const withAuth = require('../utils/auth');
+const { User, Image, Comments } = require('../models');
+// Import the custom middleware - this will be just for the api routes
+// const withAuth = require('../utils/auth');
 
-// GET all galleries for homepage
+// GET all artifacts for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findAll({
+    const dbImageData = await Image.findAll({
       include: [
         {
-          model: Painting,
-          attributes: ['filename', 'description'],
+          model: User,
+          attributes: [
+            'id',
+            'name', 
+            'title', 
+            'affiliation'],
         },
       ],
     });
 
-    const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
+    const images = dbImageData.map((image) =>
+      image.get({ plain: true })
     );
 
-    res.render('homepage', {
-      galleries,
-      loggedIn: req.session.loggedIn,
-    });
+    res.render('homepage', { images });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-// GET one gallery
-// Use the custom middleware before allowing the user to access the gallery
-router.get('/gallery/:id', withAuth, async (req, res) => {
+// GET one image with annotated comments
+router.get('/comments/:id', async (req, res) => {
   try {
-    const dbGalleryData = await Gallery.findByPk(req.params.id, {
+    const dbCommentsData = await Comments.findByPk(req.params.id, {
       include: [
         {
-          model: Painting,
+          model: Image,
           attributes: [
-            'id',
             'title',
-            'artist',
-            'exhibition_date',
+            'photographer',
+            'image_date',
             'filename',
             'description',
+            'user_id'
           ],
         },
       ],
     });
 
-    const gallery = dbGalleryData.get({ plain: true });
-    res.render('gallery', { gallery, loggedIn: req.session.loggedIn });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-// GET one painting
-// Use the custom middleware before allowing the user to access the painting
-router.get('/painting/:id', withAuth, async (req, res) => {
-  try {
-    const dbPaintingData = await Painting.findByPk(req.params.id);
-
-    const painting = dbPaintingData.get({ plain: true });
-
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
+    const comments = dbCommentsData.get({ plain: true });
+    res.render('comments', { comments });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

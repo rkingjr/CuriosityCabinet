@@ -49,3 +49,26 @@ function checkFileType(file, cb){
     cb(new Error('Error: Images only'), false)
   }
 }
+
+const saveNote = (note) =>
+  fetch('/api/notes', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(note),
+  });
+
+  const handleNoteSave = () => {
+    const newNote = {
+      title: noteTitle.value,
+      text: noteText.value,
+    };
+    saveNote(newNote).then(() => {
+      getAndRenderNotes();
+      renderActiveNote();
+    });
+  };
+  saveNoteBtn.addEventListener('click', handleNoteSave);
+
+  saveNoteBtn = document.querySelector('.save-note');

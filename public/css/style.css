@@ -66,7 +66,7 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-.gallery {
+.collection {
   flex: 4;
   background-color: #fff;
   padding: 50px;
@@ -92,14 +92,14 @@ img {
   height: auto;
 }
 
-.painting {
+.artifacts {
   width: 50%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
 }
 
-.painting-details {
+.comments-details {
   text-align: center;
   padding: 10px 20px;
   font-weight: bold;
@@ -144,7 +144,7 @@ img {
   font-weight: bold;
 }
 
-.gallery-name {
+.image-name {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);
