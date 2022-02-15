@@ -47,4 +47,4 @@ Comments.init(
     }
 );
 
-module.exports = Image;
+module.exports = Comments;
