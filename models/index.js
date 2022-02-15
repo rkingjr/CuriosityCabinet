@@ -10,7 +10,7 @@ Image.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Image.hasMany(Comments, {
+Image.hasOne(Comments, {
   foreignKey: 'image_id',
 });
 
