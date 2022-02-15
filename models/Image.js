@@ -27,8 +27,12 @@ Image.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        description: {
+        filepath: {
             type: DataTypes.STRING,
+            allowNull: true,
+        },
+        description: {
+            type: DataTypes.TEXT,
             allowNull: true,
         },
         user_id: {
