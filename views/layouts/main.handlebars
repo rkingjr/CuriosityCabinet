@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <h1>Show and Go!</h1>
+    <h1>Curiosity Cabinet!</h1>
   </header>
   <nav>
     <a href="/">Home</a>
@@ -22,17 +22,14 @@
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>Explore the Cabinet of Curiosities</h2>
-    </aside>
     <div class="collection">
       {{!-- this class label used to be "gallery" --}}
       {{{body}}}
     </div>
   </main>
-  {{#if loggedIn}}
+  {{!-- {{#if loggedIn}}
   <script src="/js/logout.js"></script>
-  {{/if}}
+  {{/if}} --}}
 </body>
 
 </html>

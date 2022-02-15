@@ -92,6 +92,10 @@ img {
   height: auto;
 }
 
+#artifacts {
+  background-image: url("../images/bookcase-single.jpeg");
+}
+
 .artifacts {
   width: 50%;
   background-color: white;
