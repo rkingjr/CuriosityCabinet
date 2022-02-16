@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div x-data="annotation()">
+        <div class="relative">
+          <img src="http://placekitten.com/600/400" x-spread="image">
+          
+          <template x-for="note in notes" :key="note.id">
+            <div
+              class="absolute w-6 h-6 border border-white rounded-full shadow-outline"
+              :style="markerStyle(note)"
+              @click="toggleNote(note)">
+              
+              <div
+                x-show="note.visible"
+                class="relative z-10 block w-48 mt-2 ml-2 space-y-2 divide-y bg-white rounded overflow-hidden"
+                @click.stop.away="toggleNote()">
+                
+                <template x-for="comment in note.comments">
+                  <p x-text="comment.text" class="px-4 pt-2 text-gray-800"></p>
+                </template>
+                
+                <input
+                  x-model="newComment"
+                  placeholder="Type new comment"
+                  class="w-full px-4 py-2 first:pt-2 bg-gray-300 focus:bg-gray-400 focus:outline-none"
+                  @keydown.enter="addComment(note)">
+              </div>
+      
+            </div>
+          </template>
+          
+        </div>
+      </div>
+      
+      <p class="p-2 text-sm text-gray-700 italic">
+        Add comments to the existing marker or click anywhere on the image to add new markers.
+      </p>
+</body>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.6.0/alpine.js"></script>
+<script src="./js/script.js"></script>
+</html>
+</html>

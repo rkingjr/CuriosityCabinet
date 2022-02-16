@@ -33,24 +33,31 @@ router.get('/', async (req, res) => {
 // GET one image with annotated comments
 router.get('/comments/:id', async (req, res) => {
   try {
-    const dbCommentsData = await Comments.findByPk(req.params.id, {
+    const dbImageData = await Image.findByPk(req.params.id, {
       include: [
         {
-          model: Image,
+          model: Comments,
           attributes: [
-            'title',
-            'photographer',
-            'image_date',
-            'filename',
-            'description',
-            'user_id'
+            'comment1',
+            'comment2',
+            'comment3',,
+            'comment4',
+            'comment5',
+            'image_id'
+          ],
+          model: User,
+          attributes: [
+           'name',
+           'title',
+           'affiliation', 
           ],
         },
       ],
     });
 
-    const comments = dbCommentsData.get({ plain: true });
-    res.render('comments', { comments });
+    const comments = dbImageData.get({ plain: true });
+    console.log(comments);
+    res.render('comments', {comments});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
