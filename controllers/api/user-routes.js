@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Comments } = require('../../models');
 
 // Import the custom middleware to restrict uploading functions
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 // CREATE new user
 router.post('/', async (req, res) => {
