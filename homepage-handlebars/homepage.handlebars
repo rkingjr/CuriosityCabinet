@@ -1,0 +1,17 @@
+d{{#each images as |image|}}
+{{> image-details}}
+{{/each}}
+{{#if loggedIn}}
+    {{!-- make the form  --}}
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <div class="custom-file">
+          <input name='myImage' type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+          <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+        </div>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Submit</button>
+        </div>
+      </div>
+    </form>
+    {{/if}}
