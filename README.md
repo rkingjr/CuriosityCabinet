@@ -1,13 +1,13 @@
-# Project 1: PokeWeather Webpage
+# Project 2: Curiosity Cabinet
 
 **Version 1.0**
 ## Description:
 
 ## User Story:
 
-AS
-I WANT
-SO THAT
+AS \
+I WANT \
+SO THAT \
 ## Original Wireframe and Tables Diagram:
 
 Gallery View: \
