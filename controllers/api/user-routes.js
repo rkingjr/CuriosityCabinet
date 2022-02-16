@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Comments } = require('../../models');
 
 // Import the custom middleware to restrict uploading functions
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -75,6 +75,43 @@ router.post('/logout', (req, res) => {
 
 // Upload image withAuth - use custom middleware before allowing user to add image
 
-// Upload comments withAuth - use custom middleware before allowing user to add image
+// Upload comments withAuth - use custom middleware before allowing user to add comments
+router.post('/newcomments', withAuth, async (req, res) => {
+  try {
+    const commentsData = await Comments.create({
+      comments1: req.body.comments1,
+      comments2: req.body.comments2,
+      comments3: req.body.comments3,
+      comments4: req.body.comments4,
+      comments5: req.body.comments5,
+    });
+    res.status(200).json(commentsData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// Update comments withAuth - use custom middleware before allowing user to edit comments
+router.put('/updatecomments/:id', withAuth, async (req, res) => {
+  try {
+    const updateComments = await Comments.update(
+      {
+        comments1: req.body.comments1,
+        comments2: req.body.comments2,
+        comments3: req.body.comments3,
+        comments4: req.body.comments4,
+        comments5: req.body.comments5,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.status(200).json(updateComments);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
