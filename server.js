@@ -12,19 +12,19 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // post route for upload
-app.post('/upload', upload.single('myImage'), async (req,res) => {
-  try {
-    const newFile = await Image.create({
-      name:req.file.path,
-    });
-    res.status(200).json({
-      status: 'success',
-      message: 'File created successfully'
-    })
-  } catch (error) {
-    res.json({error,})
-  }
-})
+// app.post('/upload', upload.single('myImage'), async (req,res) => {
+//   try {
+//     const newFile = await Image.create({
+//       name:req.file.path,
+//     });
+//     res.status(200).json({
+//       status: 'success',
+//       message: 'File created successfully'
+//     })
+//   } catch (error) {
+//     res.json({error,})
+//   }
+// })
 
 const sess = {
   secret: 'Super secret secret',
