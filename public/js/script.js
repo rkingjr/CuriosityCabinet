@@ -2,22 +2,22 @@ function annotation() {
     return {
       newComment: '',
       notes: [
-        {
-          id: Date.now(),
-          x: 260,
-          y: 22,
-          visible: true,
-          comments: [
-            { text: 'Change color, please!' },
-            { text: 'Done =)' },
-          ]
-        }
+        // {
+        //   id: Date.now(),
+        //   x: 260,
+        //   y: 22,
+        //   visible: true,
+        //   comments: [
+        //     { text: 'Change color, please!' },
+        //     { text: 'Done =)' },
+        //   ]
+        // }
       ],
       image: {
          ['@click'](event) {
            const img = event.target.getBoundingClientRect()
-           console.log(event);
-           console.log(img);
+          //  console.log(event);
+          //  console.log(img);
            this.addNote(event.pageX - img.left, event.pageY - img.top)
          }
       },
@@ -57,3 +57,10 @@ function annotation() {
       },
     }
   }
+  let clearBtn = document.getElementById("clearBtn")
+  clearBtn.addEventListener('click', event => {
+    clearAnnotations();
+  });
+ function clearAnnotations() {
+  location.reload();
+};
