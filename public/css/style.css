@@ -6,24 +6,17 @@
   --light: #e3e4e3;
   --dark: #182c23;
   --error: rgb(228, 46, 1);
-  --lightwood: #B48D51;
-  --blondewood: #FFDDA1;
-  --walnut: #5A3300;
-  --darkwood: #321414;
-  --ebony: #140000;
-
   --border-radius: 0.3rem;
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: Arial;
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
-  background-color: var(--ebony);
-  background-image: url("../images/wallpaper.jpeg");
+  background-color: var(--quatrinary);
 }
 
 a {
@@ -35,23 +28,11 @@ a:visited {
   color: inherit;
 }
 
-.header {
-  /* padding: 40px; */
-  text-align: center;
-  background: var(--blondewood);
-  color: var(--darkwood);
-  background-image: url("../images/header.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:60vw;
-  height: 335px;
-}
-
 header {
   padding: 40px;
   text-align: center;
-  background: var(--blondewood);
-  color: var(--darkwood);
+  background: var(--primary);
+  color: var(--light);
 }
 
 main {
@@ -60,21 +41,21 @@ main {
   flex-grow: 1;
 }
 
-/* aside {
+aside {
   flex: 0;
   background-color: var(--tertiary);
   padding: 80px;
   text-align: left;
   color: var(--light);
-} */
+}
 
 nav {
   display: flex;
-  background-color: var(--lightwood);
+  background-color: var(--secondary);
 }
 
 nav a {
-  color: var(--ebony);
+  color: var(--light);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -87,7 +68,7 @@ nav a:hover {
 
 .collection {
   flex: 4;
-  /* background-color: #fff; */
+  background-color: #fff;
   padding: 50px;
   display: flex;
   flex-flow: row wrap;
@@ -111,36 +92,11 @@ img {
   height: auto;
 }
 
-/* .collection {
-  background-image: url("../images/bookcase-single.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:80vmin;
-} */
-
-.boxwrapper {
-  padding: 20px;
-  flex: 0 1 300px;
-  border-width: 3px;
-  z-index: 1;
-  background-image: url("../images/bookcase-single.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
-}
-
 .artifacts {
-  width: 40%;
-  /* background-color: white; */
+  width: 50%;
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
-  border-width: 3px;
-  border-color: var(--blondewood);
-}
-
-.image-details, .image {
-  background-color: var(--lightwood);
-  width: 98%;
 }
 
 .comments-details {
@@ -150,25 +106,13 @@ img {
 }
 
 /* CARDS */
-.cubby {
-  padding: 20px;
-  flex: 0 1 300px;
-  border-width: 3px;
-  z-index: 1;
-  background-image: url("../images/bookcase-single.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:contain;
-}
-
 .card {
   margin: 20px;
   flex: 0 1 300px;
-  /* border: 7px double var(--dark);
-  border-radius: 10px; */
-  /* background-color: var(--light); */
-  /* color: var(--dark); */
-  z-index: 2;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
 }
 
 .login-card {
@@ -180,18 +124,18 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: var(--blondewood);
-  color: var(--darkwood);
+  background-color: #577a7c;
+  color: var(--light);
 }
 
 .card header {
-  color: var(--darkwood);
+  color: var(--light);
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  background-color: var(--blondewood);
+  background-color: var(--tertiary);
   padding: 0.625rem;
-  /* border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0; */
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
 
 .card-body {
@@ -204,7 +148,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);
-  border: 10px groove var(--blondewood);
+  border: 10px groove var(--light);
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 100px;
@@ -217,13 +161,4 @@ img {
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
-}
-
-.title, .byline, .description {
-padding-left: 20px;
-}
-
-#custom-btn, #custom-btn2 {
-  background-color: var(--darkwood);
-  color: var(--blondewood)
 }
