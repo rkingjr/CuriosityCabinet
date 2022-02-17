@@ -1,7 +1,6 @@
 <section class="artifacts">
-  <div class="background-image" style="background-image: url(../public/images/bookcase-single.jpeg); 
-background-repeat: no-repeat;background-attachment: fixed; background-size:cover;">
-    <img src="/images/{{comments.filename}}" alt="{{comments.description}}">
+  <div class="boxwrapper">
+    <img class="image" src="/images/{{comments.filename}}" alt="{{comments.description}}">
     <div class="image-details">
       {{!-- the code for displaying annotations via comments-details--}}
       {{!-- {{> comments-details}} --}}
@@ -11,5 +10,5 @@ background-repeat: no-repeat;background-attachment: fixed; background-size:cover
       {{!-- <p>Image By: {{image.photographer}}</p> --}}
       <p class="description">{{comments.description}}</p>
     </div>
-  </div>
+    </div>
 </section>
