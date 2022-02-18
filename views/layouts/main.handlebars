@@ -10,18 +10,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-  {{!-- <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <img src="../../public/images/header.png">
-  </div>
-</div> --}}
   <header class="header">
-    {{!-- <h1>Show and Go!</h1> --}}
   </header>
   <nav>
     <a href="/">Home</a>
@@ -31,13 +28,8 @@
     <a href="/login">Login</a>
     {{/if}}
   </nav>
-  <main class="background-image" style="background-image: url(./wallpaper.jpeg); 
-background-repeat: no-repeat;background-attachment: fixed; background-size:cover;">
-    {{!-- <aside>
-      <h2>Explore the Cabinet of Curiosities</h2>
-    </aside> --}}
+  <main>
     <div class="collection">
-      {{!-- this class label used to be "gallery" --}}
       {{{body}}}
     </div>
   </main>
@@ -45,5 +37,6 @@ background-repeat: no-repeat;background-attachment: fixed; background-size:cover
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
-
+<script src="/js/script.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.6.0/alpine.js"></script>
 </html>

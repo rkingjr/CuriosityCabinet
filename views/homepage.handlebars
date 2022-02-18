@@ -1,33 +1,35 @@
 {{#each images as |image|}}
 {{> image-details}}
 {{/each}}
-{{#if loggedIn}}
+    {{!-- {{#if loggedIn}} --}}
     {{!-- make the form  --}}
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-      <div class="input-group">
-        <div class="form-group">
-            <label for="formGroupExampleInput">Title</label>
-            <input type="text" class="form-control title" id="formGroupExampleInput" placeholder="Required">
+    <form action='/upload' method='POST' enctype='multipart/form-data” id=“form'>
+      <div class='input-group'>
+        {{!-- <div class=“form-group”>
+            <label for=“formGroupExampleInput”>Title</label>
+            <input type=“text” class=“form-control” id=“title” placeholder=“Required”>
+        </div> --}}
+        {{!-- <div class=“form-group”>
+            <label for=“formGroupExampleInput2”>Photographer</label>
+            <input type=“text” class=“form-control” id=“photographer” placeholder=“optional”>
         </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Photographer</label>
-            <input type="text" class="form-control photoghapher" id="formGroupExampleInput2" placeholder="optional">
+        <div class=“form-group”>
+            <label for=“formGroupExampleInput2”>Image date</label>
+            <input type=“text” class=“form-control” id=“imageDate” placeholder=“optional”>
         </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Image date</label>
-            <input type="text" class="form-control image-date" id="formGroupExampleInput2" placeholder="optional">
+        <div class=“form-group”>
+            <label for=“exampleFormControlTextarea1”>Description</label>
+            <textarea class=“form-control” id=“description” rows=“3"></textarea>
+        </div> --}}
+        <div class='custom-file'>
+          <input name="myImage" type='file' class='custom-file-input' id='inputGroupFile04' aria-describedby='inputGroupFileAddon04'>
+          <label class='custom-file-label' for='inputGroupFile04'>Choose file</label>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control description" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="custom-file">
-          <input name='myImage' type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-          <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-        </div>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary submit" type="submit" id="inputGroupFileAddon04">Submit</button>
+        <div class='input-group-append'>
+          <button class='btn btn-outline-secondary submit' type='submit' id='inputGroupFileAddon04'>Submit</button>
         </div>
       </div>
     </form>
-    {{/if}}
+<script src='/js/upload.js'></script>
+{{!-- {    {{else}}
+{{/if}}} --}}

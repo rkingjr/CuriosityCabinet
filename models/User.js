@@ -18,7 +18,7 @@ User.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     title: {
         type: DataTypes.STRING,
@@ -40,7 +40,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
       validate: {
-        len: [8],
+        len: [6],
       },
     },
   },
