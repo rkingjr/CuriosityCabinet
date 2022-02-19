@@ -106,11 +106,9 @@ nav a:hover {
   margin-left: 16px;
 }
 
-img {
+.img {
   width: 410px;
   height: 360px;
-
-
 }
 
 /* .collection {
@@ -123,7 +121,6 @@ img {
 .boxwrapper {
   padding: 20px;
   flex: 0 1 300px;
-  border-width: 3px;
   z-index: 1;
   background-image: url("../images/bookcase-single.jpeg");
   background-repeat: no-repeat;
@@ -138,8 +135,6 @@ img {
   /* background-color: white; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
-  border-width: 3px;
-  border-color: var(--blondewood);
 }
 
 .image-details, .image {
@@ -156,8 +151,7 @@ img {
 /* CARDS */
 .cubby {
   padding: 20px;
-  flex: 0 1 300px;
-  border-width: 3px;
+  /* flex: 0 1 300px; */
   z-index: 1;
   background-image: url("../images/bookcase-single.jpeg");
   background-repeat: no-repeat;
@@ -168,8 +162,8 @@ img {
 }
 
 .card {
-  margin: 20px;
-  flex: 0 1 300px;
+  margin: 10px;
+  /* flex: 0 1 300px; */
   /* border: 7px double var(--dark);
   border-radius: 10px; */
   /* background-color: var(--light); */
