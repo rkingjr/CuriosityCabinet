@@ -4,7 +4,7 @@ const { User, Image, Comments } = require('../models');
 // const withAuth = require('../utils/auth');
 
 // GET all artifacts for homepage
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   try {
     const dbImageData = await Image.findAll({
       include: [
@@ -12,8 +12,8 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: [
             'id',
-            'name', 
-            'title', 
+            'name',
+            'title',
             'affiliation'],
         },
       ],
@@ -49,7 +49,7 @@ router.get('/comments/:id', async (req, res) => {
           attributes: [
            'name',
            'title',
-           'affiliation', 
+           'affiliation',
           ],
         },
       ],
