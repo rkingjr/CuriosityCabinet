@@ -38,10 +38,10 @@ app.use(routes);
 
 // Set storage engine- where to store images
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: (_req, _file, cb) => {
     cb(null, "./public/images")
   },
-  filename: (req, file, cb) => {
+  filename: (_req, file, cb) => {
     // naming convention
     cb(null, file.originalname + "-" + Date.now() + path.extname(file.originalname));
   }
