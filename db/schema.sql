@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS showGo_db;
-
-CREATE DATABASE showGo_db;
